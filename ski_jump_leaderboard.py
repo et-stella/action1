@@ -218,7 +218,7 @@ for _, row in df.iterrows():
     photo = str(row["사진URL"]) if "사진URL" in df.columns and pd.notna(row["사진URL"]) else ""
 
     # Adjust to center by half avatar size
-    offset = {avatar_size} / 2.0
+    offset = avatar_size / 2.0
     style = f"left:{x-offset}px; top:{y-offset}px; background-image:url('{photo}');"
     stage.append(f'<div class="checkpoint" style="{style}"></div>')
     if {str(show_rank_number).lower()}:
